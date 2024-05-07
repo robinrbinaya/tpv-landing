@@ -1,0 +1,135 @@
+.banner {
+    position: relative;
+    height: 25rem;
+    width: 100%;
+
+    @include breakpoint-down(medium){
+        width: 100%;
+        height: 15.4375rem;
+    }
+
+    @include breakpoint-down(small){
+        width: 100%;
+        height: 11.4375rem;
+        overflow-x: hidden;
+    }
+
+    &__header {
+        overflow: hidden;
+        color: #2766C0;
+        text-overflow: ellipsis;
+        font-family: Anton;
+        font-size: 3rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 3.375rem; /* 112.5% */
+        margin-left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        span{
+            color: #5DA4FF;
+        }
+    
+        @include breakpoint-down(medium){
+            font-size: 1.875rem;
+            font-weight: 400;
+        }
+    
+        @include breakpoint-down(small){
+            font-size: 1.5rem;
+            line-height: 1.85rem;
+        }
+    }
+    
+    &__text {
+        width: 45.6875rem;
+        color: var(--Primary-1, #2766C0);
+        text-align: center;
+        font-family: Overpass;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 2rem; /* 177.778% */
+        margin-left: 50%;
+        transform: translateX(-50%);
+    
+        @include breakpoint-down(medium){
+            font-size: 0.75rem;
+            font-weight: 600;
+            line-height: 1.125rem; 
+            width: 25.88956rem;
+            
+        }
+    
+        @include breakpoint-down(small){
+            font-size: 0.5rem;
+            font-weight: 600;
+            line-height: 0.75rem;
+            width: 16.5rem;
+        }
+    }
+
+    &__menu{
+        position: relative;
+        width: 100%;
+        display: flex;
+    }
+
+    &__content{
+            display: grid;
+            border-radius: 1rem;
+            text-align: center;
+            width: 20%;
+            height: 12rem;
+            background: rgba(255, 136, 53, 0.80);
+
+            @include breakpoint-down(medium){
+                height: 4.83444rem;
+                
+            }
+        
+            @include breakpoint-down(small){
+                height: 1.85944rem;
+            }
+
+            &:not(:last-child){
+                margin-right: 2rem;
+
+                @include breakpoint-down(medium){
+                    margin-right: 1rem;
+                    
+                }
+            
+                @include breakpoint-down(small){
+                    margin-right: 0.2rem;
+                }
+            }
+
+            a{  
+                align-self: center;
+                font-family: Anton;
+                font-size: 2.25rem;
+                font-style: normal;
+                line-height: 2.25rem;
+                color: var(--Background, #FEFCFB);
+                font-weight: 400;
+                transition: scale 200ms ease-in-out;
+
+                @include breakpoint-down(medium){
+                    font-size: 1rem;
+                    line-height: 1.25rem
+                    
+                }
+            
+                @include breakpoint-down(small){
+                    font-size: 0.5rem;
+                    line-height: 0.5rem;
+                }
+    
+                    
+                    &:hover{
+                        scale: 1.05;
+                    }
+            }
+    }
+}

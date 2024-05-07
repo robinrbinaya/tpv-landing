@@ -1,0 +1,271 @@
+.service {
+    position: relative;
+    height: 58rem;
+    width: 100%;
+
+    @include breakpoint-down(medium){
+        width: 100%;
+        height: 35.4375rem;
+    }
+
+    @include breakpoint-down(small){
+        width: 100%;
+        height: 37.4375rem;
+        overflow-x: hidden;
+    }
+
+    
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        justify-content: center;
+
+        @include breakpoint-down(small){
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+
+    &__item {
+        //overflow: hidden;
+        padding: 1rem;
+        position: relative;
+        width: 23.125rem;
+        height: 17.375rem;
+        flex-shrink: 0;
+        margin: 1rem;
+        margin-left: 2rem;
+        border-radius: 0.5rem;
+        background-repeat: no-repeat;
+        background-color: var(--Primary-2, #FED516);
+        background-blend-mode: multiply;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+        &:nth-child(1){
+            background-image: url('images/imagesbw/AFAM\ Couple.png');
+            //background: url('images/images/AFAM\ Couple.png') lightgray -1.177px -133px / 100.198% 191.106% no-repeat;
+            background-position: bottom right;
+            background-size: 60%;
+        }
+
+        &:nth-child(2){
+            background-image: url('images/imagesbw/Couple\ Traveler.png');
+            background-position: bottom right;
+            background-size: 60%;
+        }
+
+        &:nth-child(3){
+            background-image: url('images/imagesbw/Family\ Traveler.png');
+            background-position: bottom right;
+            background-size: 80%;
+        }
+
+        &:nth-child(4){
+            background-image: url('images/imagesbw/Retired\ Couple.png');
+            background-position: bottom right;
+            background-size: 80%;
+        }
+
+        &:nth-child(5){
+            background-image: url('images/imagesbw/Student\ Traveler.png');
+            background-position: bottom right;
+            background-size: 60%;
+        }
+
+        &:nth-child(6){
+            background-image: url('images/imagesbw/Solo\ Traveler.png');
+            background-position: bottom right;
+            background-size: 50%;
+        }
+
+        transition: scale 200ms ease-in-out;
+            &:hover{
+                scale: 1.1;
+                background-blend-mode: normal;
+
+                &:nth-child(1){
+                    background-image: url('images/images/AFAM\ Couple.png');
+                    background-position: bottom right;
+                    background-size: 60%;
+                }
+        
+                &:nth-child(2){
+                    background-image: url('images/images/Couple\ Traveler.png');
+                    background-position: bottom right;
+                    background-size: 60%;
+                }
+        
+                &:nth-child(3){
+                    background-image: url('images/images/Family\ Traveler.png');
+                    background-position: bottom right;
+                    background-size: 80%;
+                }
+        
+                &:nth-child(4){
+                    background-image: url('images/images/Retired\ Couple.png');
+                    background-position: bottom right;
+                    background-size: 80%;
+                }
+        
+                &:nth-child(5){
+                    background-image: url('images/images/Student\ Traveler.png');
+                    background-position: bottom right;
+                    background-size: 60%;
+                }
+        
+                &:nth-child(6){
+                    background-image: url('images/images/Solo\ Traveler.png');
+                    background-position: bottom right;
+                    background-size: 50%;
+                }
+            }
+        
+
+        @include breakpoint-down(medium){
+            padding: 0.5rem;
+            max-width: 13.10419rem;
+            max-height: 9.84581rem;
+            
+        }
+
+        @include breakpoint-down(small){
+            padding: 0.25rem;
+            width: 8.47725rem;
+            height: 6.36938rem;
+        }
+        
+    }
+
+    &__icon {
+        position: absolute;
+        margin-top: -1rem;
+        margin-left: -1rem;
+        width: 100%;
+        z-index: 1;
+
+        &__student {
+            position: absolute;
+            margin-top: 1rem;
+            margin-left: 8rem;
+            width: 75%;
+
+            @include breakpoint-down(medium){
+                margin-top: 1rem;
+                margin-left: 3rem;
+            }
+    
+            @include breakpoint-down(small){
+                margin-top: 1rem;
+                margin-left: 3rem;
+            }
+        }
+        
+    }
+    
+    &__title {
+        position: relative;
+        width: 80%;
+        color: var(--Primary-1, #2766C0);
+        font-family: Anton;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2.125rem; /* 141.667% */
+        //margin-top: -70%;
+        z-index: 1;
+        
+
+        @include breakpoint-down(medium){
+            width: 70%;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1rem;
+        }
+
+        @include breakpoint-down(small){
+            width: 70%;
+            font-size: 0.625rem;
+            font-weight: 400;
+            line-height: 1rem;
+        }
+    }
+
+    &__description {
+        position: relative;
+        color: var(--Primary-1, #2766C0);
+        font-family: Overpass;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.625rem; /* 162.5% */
+        width: 60%;
+        z-index: 1;
+
+        @include breakpoint-down(medium){
+            width: 55%;
+            font-size: 0.625rem;
+            font-weight: 400;
+            line-height: 0.9375rem;
+        }
+
+        @include breakpoint-down(small){
+            width: 55%;
+            font-size: 0.5rem;
+            font-weight: 400;
+            line-height: 0.625rem;
+        }
+    }
+}
+
+h2 {
+    overflow: hidden;
+    color: #2766C0;
+    text-overflow: ellipsis;
+    font-family: Anton;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3.375rem; /* 112.5% */
+    margin-left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    span{
+        color: #5DA4FF;
+    }
+
+    @include breakpoint-down(medium){
+        font-size: 1.875rem;
+        font-weight: 400;
+    }
+
+    @include breakpoint-down(small){
+        font-size: 1.5rem;
+    }
+}
+
+.service__content {
+    width: 45.6875rem;
+    color: var(--Primary-1, #2766C0);
+    text-align: center;
+    font-family: Overpass;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2rem; /* 177.778% */
+    margin-left: 50%;
+    transform: translateX(-50%);
+
+    @include breakpoint-down(medium){
+        font-size: 0.75rem;
+        font-weight: 600;
+        line-height: 1.125rem; 
+        width: 25.88956rem;
+        
+    }
+
+    @include breakpoint-down(small){
+        font-size: 0.5rem;
+        font-weight: 600;
+        line-height: 0.75rem;
+        width: 16.5rem;
+    }
+}

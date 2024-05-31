@@ -620,11 +620,10 @@ button, .button {
   font-style: normal;
   font-weight: 700;
   line-height: 2.5rem; /* 133.333% */
-  text-decoration-line: underline;
   text-align: left;
 }
 .qualify__header span {
-  color: #5DA4FF;
+  text-decoration-line: underline;
 }
 @media (max-width: 63.9375em) {
   .qualify__header {

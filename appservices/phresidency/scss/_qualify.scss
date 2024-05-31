@@ -41,10 +41,9 @@
         font-style: normal;
         font-weight: 700;
         line-height: 2.5rem; /* 133.333% */
-        text-decoration-line: underline;
         text-align: left;
         span{
-            color: #5DA4FF;
+            text-decoration-line: underline;
         }
     
         @include breakpoint-down(medium){
